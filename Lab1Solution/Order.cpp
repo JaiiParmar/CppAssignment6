@@ -7,10 +7,16 @@
 
 //Assingment6
 
-void Order::createOrders(std::string path)
+#include "IOrder.h"
+#include "ISource.h"
+
+void Order::createOrders(/*std::string path*/ISource* source)
 {
 	// open file
-	std::ifstream ordersFile;
+
+		//Old Code.
+
+	/*std::ifstream ordersFile;
 
 	double l, w, h;
 	
@@ -27,7 +33,12 @@ void Order::createOrders(std::string path)
 			ordersFile >> l >> w >> h >> q >> color;
 			orders.push_back(std::make_tuple(l, w, h, q, color));
 		}
-	}
+	}*/
+
+
+	//New Code.
+	
+	orders = source->getData();
 
 }
 

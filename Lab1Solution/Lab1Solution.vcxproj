@@ -160,8 +160,10 @@
     <ClCompile Include="IBoxMaker.cpp" />
     <ClCompile Include="IBoxPainter.cpp" />
     <ClCompile Include="IOrder.cpp" />
+    <ClCompile Include="ISource.cpp" />
     <ClCompile Include="Lab1Solution.cpp" />
     <ClCompile Include="Order.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AssemblyLine.h" />
@@ -172,7 +174,9 @@
     <ClInclude Include="IBoxMaker.h" />
     <ClInclude Include="IBoxPainter.h" />
     <ClInclude Include="IOrder.h" />
+    <ClInclude Include="ISource.h" />
     <ClInclude Include="Order.h" />
+    <ClInclude Include="Source.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Orders.txt" />

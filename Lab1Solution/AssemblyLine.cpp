@@ -15,7 +15,8 @@
 #include "IBoxMaker.h"
 #include "IBoxPainter.h"
 #include "IOrder.h"
-
+#include "ISource.h"
+#include "Source.h"
 //Constructor...
 AssemblyLine::AssemblyLine()
 {
@@ -29,8 +30,13 @@ AssemblyLine::AssemblyLine()
 void AssemblyLine::Start() const
 {
 	
+	ISource* pSource = new Source();
+
 	IOrder* pOrder = new Order;
-	pOrder->createOrders("C:\\Users\\Jayesh\\Downloads\\Lab1Solution\\Lab1Solution\\Orders.txt");
+
+	//pOrder->createOrders("C:\\Users\\Jayesh\\Downloads\\Lab1Solution\\Lab1Solution\\Orders.txt");
+	pOrder->createOrders(pSource);
+
 	std::cout << "New order received" << std::endl;
 	std::cout << "Manufacturing " << pOrder->totalQuantity() << " boxes"<< std::endl;
 	
